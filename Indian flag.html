@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- saved from url=(0078)http://127.0.0.1:5500/Adding%20css/%20css%20positining.html/indian%20flag.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian flag</title>
+    <style>
+        .main{
+            width: 900px;
+            height: 600px;
+            border: solid;
+            position: relative;
+        }
+        .orange{
+            width: 100%;
+            height: 200px;
+            background-color: red;
+            position: relative;
+
+        }
+        .green{
+            width: 100%;
+            height: 200px;
+            background: green;
+            position: relative;
+            top: 400px;
+        
+
+        }
+        .main .orange img{
+            width: 200px;
+            position: absolute;
+            top: 200px;
+            left: 350px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        
+        <div class="orange">
+            <img src="./Indian flag_files/ashokachakra.jpg" alt="">
+            <div class="green">
+            </div>
+        </div>
+
+    </div>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
